@@ -4,6 +4,15 @@ This app was created using [`@capacitor/create-app`](https://github.com/ionic-te
 and comes with a very minimal shell for building an app.
 
 ---
+## Voraussetzungen
+
+- **Node.js** >= 24.x
+- **npm** >= 11.x
+- **Android Studio** (für lokale Android-Builds)
+- **JDK** >= 24
+- Ein **Spotify Developer Account** (falls Spotify-Integration vorhanden)
+
+---
 
 ## Installation
 
