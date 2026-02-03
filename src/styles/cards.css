@@ -1,0 +1,100 @@
+/* Reusable Card Styles */
+
+.card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, rgba(29, 185, 84, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-dark {
+  background: var(--bg-dark-overlay);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+}
+
+.card-interactive {
+  cursor: pointer;
+  transition: all var(--transition-base);
+  border: 2px solid transparent;
+}
+
+.card-interactive:hover {
+  background: var(--bg-glass-hover);
+  transform: translateY(-3px);
+  border-color: var(--color-spotify-green);
+}
+
+/* Track Card */
+/* .track-card {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.track-cover {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  flex-shrink: 0;
+} */
+
+.track-cover-sm {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-sm);
+}
+
+.track-cover-lg {
+  width: 250px;
+  height: 250px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+}
+
+.track-details {
+  flex: 1;
+  color: var(--color-white);
+}
+
+.track-name {
+  font-size: var(--font-size-xl);
+  font-weight: bold;
+  margin-bottom: var(--spacing-sm);
+}
+
+.track-artist {
+  font-size: var(--font-size-xl);
+  color: var(--color-spotify-green);
+  font-weight: 600;
+  /* margin-bottom: var(--spacing-xs); */
+}
+
+.track-album {
+  font-size: var(--font-size-base);
+  opacity: 0.8;
+  margin-bottom: var(--spacing-xs);
+}
+
+.track-year {
+  font-size: var(--font-size-lg);
+  opacity: 0.6;
+  color: var(--color-spotify-dark);
+}
+
+.track-uri {
+  font-size: 0.7em;
+  color: #666;
+  word-break: break-all;
+  font-family: monospace;
+}
