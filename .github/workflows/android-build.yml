@@ -52,20 +52,20 @@ jobs:
         run: ./gradlew assembleDebug
 
       # ── 8b. Release APK bauen (nur wenn Keystore-Secrets vorhanden) ──
-      - name: Decode Keystore
-        if: ${{ secrets.KEYSTORE_BASE64 != '' }}
-        run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > android/app/my-keystore.jks
+      # - name: Decode Keystore
+      #   if: ${{ secrets.KEYSTORE_BASE64 != '' }}
+      #   run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > android/app/my-keystore.jks
 
-      - name: Build Release APK
-        if: ${{ secrets.KEYSTORE_BASE64 != '' }}
-        working-directory: android
-        run: |
-          ./gradlew assembleRelease \
-            -Pandroid.injected.invoked.from.ide=true \
-            -PKEYSTORE_PATH=$(pwd)/app/my-keystore.jks \
-            -PKEYSTORE_PASSWORD=${{ secrets.KEYSTORE_PASSWORD }} \
-            -PKEY_ALIAS=${{ secrets.KEY_ALIAS }} \
-            -PKEY_PASSWORD=${{ secrets.KEY_PASSWORD }}
+      # - name: Build Release APK
+      #   if: ${{ secrets.KEYSTORE_BASE64 != '' }}
+      #   working-directory: android
+      #   run: |
+      #     ./gradlew assembleRelease \
+      #       -Pandroid.injected.invoked.from.ide=true \
+      #       -PKEYSTORE_PATH=$(pwd)/app/my-keystore.jks \
+      #       -PKEYSTORE_PASSWORD=${{ secrets.KEYSTORE_PASSWORD }} \
+      #       -PKEY_ALIAS=${{ secrets.KEY_ALIAS }} \
+      #       -PKEY_PASSWORD=${{ secrets.KEY_PASSWORD }}
 
       # ── 9. APK-Dateien sammeln ──────────────────────────
       - name: Collect APKs
